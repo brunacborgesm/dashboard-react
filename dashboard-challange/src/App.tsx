@@ -1,23 +1,20 @@
-import { Header } from './components/Header/'
+import { NavBar } from './components/NavBar'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Grid from '@mui/material/Unstable_Grid2';
-import { DropdonwMenu } from './components/DropdownMenu';
-
- //pages
-import { DashboardPage } from './components/pages/Dashboard'
-import { NotFound } from './components/pages/NotFound';
-import { AccountPage } from './components/pages/Account';
+//pages
+import { DashboardPage } from './pages/Dashboard'
+import { NotFound } from './pages/NotFound';
+import { AccountPage } from './pages/Account';
 
 function App() {
 
   return (
     <>
-      <Header />
+
       <BrowserRouter>
-        <Grid container spacing={5}>
-          <Grid xs={3}>
-            <DropdonwMenu />
-          </Grid>
+        <NavBar />
+        <Grid container spacing={6}>
+          <Grid xs={3}></Grid>
           <Grid xs={9}>
             <Routes>
               <Route path="/" element={<DashboardPage />} />
